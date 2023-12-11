@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="body-up">
+        <div class="upload">
+            <h1>File Upload System</h1>
+
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput" />
+                <button type="button" onclick="uploadFile()">Upload File</button>
+            </form>
+        
+            <!-- Display Uploaded Files -->
+            <div id="fileList">
+                <!-- File list will be displayed here -->
+            </div>
+        
+            <!-- File Viewer Modal -->
+            <div id="fileViewerModal" style="display: none;">
+                <div id="fileViewerContent">
+                    <a id="downloadLink" href="#" download>Download File</a>
+                </div>
+                <button onclick="closeFileViewer()">Close</button>
+            </div>
+        </div>        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
